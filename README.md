@@ -26,24 +26,20 @@ canvas{position:fixed;inset:0;pointer-events:none}
 <div id="letter">
 <h2>My Love,</h2>
 <p>
-Happy National Girlfriend’s Day, my love.
-Even though we are very far apart right now, I just wanted to let you know how much you mean to me.
-I believe there shouldn’t be a day to celebrate girlfriends. To me, every day should be used to celebrate how much I love you and how much you love me. One day simply isn’t enough to show this.
+Happy National Girlfriend’s Day, my love. Even though we are very far apart right now, I just wanted to let you know how much you mean to me. I believe there shouldn’t be a day to celebrate girlfriends. To me everyday should be used to celebrate how much I love you and you love me. One day isn’t enough to show this. 
 </p>
 
 <p>
-I remember when we first started talking. I was pretty nervous being with you at first. Not because I was embarrassed, but because I cared so much about what you thought of me. I didn’t know if I was being annoying or if you liked me at that moment.
-But now I realize just how much you loved me, and I am so thankful for it.
+
+I remember when we first started talking. I was pretty nervous being with you first. Not because I was embarrassed, but because of how you thought about me. I didn’t know if I was being annoying or if you liked me at that moment. But now I realize how much you loved me and I am very thankful for it. 
 </p>
 
 <p>
-I remember the first time I went over to your house and we went to the float parade. I looked a little lost—not because I didn’t want to be there, but because I didn’t know how to act. I wanted to make a good impression on your grandparents and your sister, but I wasn't sure how.
-Eventually I became more confident and started talking more.
-If I could go back in time, I would spend even more of those moments close to you, hugging you a little tighter.
+I remember the first time I went over to your house and we went to the float parade. I looked lost there, not because I didn’t want to be there, but because I didn’t know how to act. I wanted to be a good impression to your grandparents and sister, but I didn’t know how. Then I started getting more confident and a little more talkative. If I could go back in time, I would be more close to you and hugging you more.
 </p>
 
 <p>
-There are so many things I love about you that it's impossible to list them all because I honestly love everything about you.
+Going on, I just wanted to share with you the things I like about you the most. This is impossible because I love everything about you. 
 Your gorgeous smile.
 The fun times we've had together.
 Every invitation to your house.
@@ -53,33 +49,22 @@ And I could keep writing forever.
 </p>
 
 <p>
-One of the things I admire the most is how distance has never weakened what we have.
-If anything, it has only made us stronger.
-Our love proves that nothing can pull us apart, even when we can't physically be together.
-I appreciate your patience more than words can express.
-And while I say distance makes us stronger, that will never mean I don't want to see you.
-The thing I want most is to spend every day beside you.
-I want us to live together, share our own home, sleep in the same bed, and build our entire life together.
+But what I also love from you is how distant doesn’t affect the love we have. If not it only made it stronger. This distance is proof that nothing can pull us apart, even if we can’t physically see each other. I want to appreciate the patience you have for me. Me talking about how the distance is making us stronger isn’t excuse to not wanting to see you. You should know that what I want the most is to be able to spend time with you and being close to you. You should know how much I want to live with you, share our own bed, our own house, everything.
 </p>
 
 <p>
-I dream about our future all the time.
-A future where you're waiting for me to come home from work.
-A future where instead of asking, "When can we call?" we ask,
-"When are you coming home for dinner?"
-I hope we can have a family together.
-Taking our kids to the park every weekend.
-Going to the movies to watch Toy Story 8 or Cars 6.
-Bringing you flowers every single day until you have your own beautiful flower collection.
-Those are the moments I look forward to the most.
+And I hope our future will look like that. 
+I want a future where you are waiting for me to get back from work, and not having to ask each other, “When can we call?” 
+Instead I want it to be, “When are you coming home for dinner?” 
+I really hope we can have a family together and taking our kids to the park every weekend, or going to the movies and watching Toy Story 8, or Cars 6. 
+I would love to also bring you flowers everyday and you having a whole flower collection.
 </p>
 
 <p>
-But enough of me talking forever.
-I just want you to know how incredibly thankful I am that you're my girlfriend.
-Thank you for trusting me these past eight months.
-I promise I will stay committed to you no matter how many miles separate us.
-Distance will never change how deeply I love you.
+But enough yapping. 
+I am really thankful you are my girlfriend and for trusting me these 8 months. 
+I promise you I will stay committed with you no matter what distance is between us. 
+I love you so much Valerie and I hope we continue to grow together.
 </p>
 
 <p>
