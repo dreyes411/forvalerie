@@ -258,3 +258,76 @@ setInterval(createHeart,300);
 
 </body>
 </html>
+
+<div class="countdown-container">
+  <h2>Countdown to National Girlfriend's Day ❤️</h2>
+  <div id="countdown">
+    <div><span id="days">0</span><small>Days</small></div>
+    <div><span id="hours">0</span><small>Hours</small></div>
+    <div><span id="minutes">0</span><small>Minutes</small></div>
+    <div><span id="seconds">0</span><small>Seconds</small></div>
+  </div>
+</div>
+
+<style>
+.countdown-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+#countdown div {
+    background: rgba(255,255,255,0.12);
+    padding: 15px 20px;
+    border-radius: 12px;
+    min-width: 90px;
+    backdrop-filter: blur(8px);
+}
+
+#countdown span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#countdown small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+</style>
+
+<script>
+const targetDate = new Date("November 8, 2026 00:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance <= 0) {
+        document.getElementById("countdown").innerHTML =
+            "<h2>❤️ Happy National Girlfriend's Day! ❤️</h2>";
+        clearInterval(timer);
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+}
+
+updateCountdown();
+const timer = setInterval(updateCountdown, 1000);
+</script>
