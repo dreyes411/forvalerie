@@ -1,1 +1,260 @@
 # forvalerie
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy National Girlfriend's Day ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#ff9ec4,#ffd6e7,#ffeef5);
+overflow-x:hidden;
+min-height:100vh;
+color:#444;
+}
+
+/* Floating Hearts */
+
+.hearts{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+.heart{
+position:absolute;
+bottom:-50px;
+font-size:25px;
+animation:float linear infinite;
+opacity:.75;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+10%{
+opacity:1;
+}
+100%{
+transform:translateY(-110vh) rotate(360deg);
+opacity:0;
+}
+}
+
+/* Main Card */
+
+.container{
+display:flex;
+justify-content:center;
+padding:50px 20px;
+}
+
+.card{
+max-width:900px;
+background:rgba(255,255,255,.35);
+backdrop-filter:blur(18px);
+padding:45px;
+border-radius:30px;
+box-shadow:0 15px 40px rgba(255,105,180,.25);
+animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:65px;
+text-align:center;
+color:#ff2d75;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+font-size:18px;
+margin-bottom:35px;
+color:#666;
+}
+
+p{
+line-height:2;
+font-size:18px;
+margin-bottom:25px;
+}
+
+.signature{
+margin-top:50px;
+text-align:right;
+font-family:'Great Vibes',cursive;
+font-size:42px;
+color:#ff2d75;
+}
+
+.footer-heart{
+text-align:center;
+font-size:65px;
+margin:40px 0;
+animation:beat 1s infinite;
+}
+
+@keyframes beat{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.25);
+}
+}
+
+@media(max-width:700px){
+
+.card{
+padding:25px;
+}
+
+h1{
+font-size:48px;
+}
+
+p{
+font-size:16px;
+}
+
+.signature{
+font-size:34px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts"></div>
+
+<div class="container">
+<div class="card">
+
+<h1>Happy National Girlfriend's Day ❤️</h1>
+<p class="subtitle">For the love of my life, Valerie 💕</p>
+
+<p>
+Happy National Girlfriend’s Day, my love.
+Even though we are very far apart right now, I just wanted to let you know how much you mean to me.
+I believe there shouldn’t be a day to celebrate girlfriends. To me, every day should be used to celebrate how much I love you and how much you love me. One day simply isn’t enough to show this.
+</p>
+
+<p>
+I remember when we first started talking. I was pretty nervous being with you at first. Not because I was embarrassed, but because I cared so much about what you thought of me. I didn’t know if I was being annoying or if you liked me at that moment.
+But now I realize just how much you loved me, and I am so thankful for it.
+</p>
+
+<p>
+I remember the first time I went over to your house and we went to the float parade. I looked a little lost—not because I didn’t want to be there, but because I didn’t know how to act. I wanted to make a good impression on your grandparents and your sister, but I wasn't sure how.
+Eventually I became more confident and started talking more.
+If I could go back in time, I would spend even more of those moments close to you, hugging you a little tighter.
+</p>
+
+<p>
+There are so many things I love about you that it's impossible to list them all because I honestly love everything about you.
+Your gorgeous smile.
+The fun times we've had together.
+Every invitation to your house.
+Your constant support.
+Your natural beauty—you truly don't need makeup to be the most beautiful girl in the world.
+And I could keep writing forever.
+</p>
+
+<p>
+One of the things I admire the most is how distance has never weakened what we have.
+If anything, it has only made us stronger.
+Our love proves that nothing can pull us apart, even when we can't physically be together.
+I appreciate your patience more than words can express.
+And while I say distance makes us stronger, that will never mean I don't want to see you.
+The thing I want most is to spend every day beside you.
+I want us to live together, share our own home, sleep in the same bed, and build our entire life together.
+</p>
+
+<p>
+I dream about our future all the time.
+A future where you're waiting for me to come home from work.
+A future where instead of asking, "When can we call?" we ask,
+"When are you coming home for dinner?"
+I hope we can have a family together.
+Taking our kids to the park every weekend.
+Going to the movies to watch Toy Story 8 or Cars 6.
+Bringing you flowers every single day until you have your own beautiful flower collection.
+Those are the moments I look forward to the most.
+</p>
+
+<p>
+But enough of me talking forever.
+I just want you to know how incredibly thankful I am that you're my girlfriend.
+Thank you for trusting me these past eight months.
+I promise I will stay committed to you no matter how many miles separate us.
+Distance will never change how deeply I love you.
+</p>
+
+<p>
+I love you so much, Valerie.
+Thank you for making my life brighter every single day.
+I hope we continue growing together, creating memories, chasing our dreams, and loving each other more with every passing day.
+❤️
+</p>
+
+<div class="signature">
+With all my love,<br>
+Diego<br>
+<small style="font-size:28px;">(Your future husband ❤️)</small>
+</div>
+
+<div class="footer-heart">💖</div>
+
+</div>
+</div>
+
+<script>
+const hearts=document.querySelector(".hearts");
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML=["💖","💕","💗","💝","💘","❤️"][Math.floor(Math.random()*6)];
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(20+Math.random()*25)+"px";
+heart.style.animationDuration=(6+Math.random()*6)+"s";
+hearts.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},12000);
+}
+
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
