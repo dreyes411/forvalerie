@@ -1,166 +1,31 @@
 # forvalerie
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Happy National Girlfriend's Day ❤️</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#ff9ec4,#ffd6e7,#ffeef5);
-overflow-x:hidden;
-min-height:100vh;
-color:#444;
-}
-
-/* Floating Hearts */
-
-.hearts{
-position:fixed;
-width:100%;
-height:100%;
-overflow:hidden;
-z-index:-1;
-}
-
-.heart{
-position:absolute;
-bottom:-50px;
-font-size:25px;
-animation:float linear infinite;
-opacity:.75;
-}
-
-@keyframes float{
-0%{
-transform:translateY(0) rotate(0deg);
-opacity:0;
-}
-10%{
-opacity:1;
-}
-100%{
-transform:translateY(-110vh) rotate(360deg);
-opacity:0;
-}
-}
-
-/* Main Card */
-
-.container{
-display:flex;
-justify-content:center;
-padding:50px 20px;
-}
-
-.card{
-max-width:900px;
-background:rgba(255,255,255,.35);
-backdrop-filter:blur(18px);
-padding:45px;
-border-radius:30px;
-box-shadow:0 15px 40px rgba(255,105,180,.25);
-animation:fadeIn 2s ease;
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-h1{
-font-family:'Great Vibes',cursive;
-font-size:65px;
-text-align:center;
-color:#ff2d75;
-margin-bottom:10px;
-}
-
-.subtitle{
-text-align:center;
-font-size:18px;
-margin-bottom:35px;
-color:#666;
-}
-
-p{
-line-height:2;
-font-size:18px;
-margin-bottom:25px;
-}
-
-.signature{
-margin-top:50px;
-text-align:right;
-font-family:'Great Vibes',cursive;
-font-size:42px;
-color:#ff2d75;
-}
-
-.footer-heart{
-text-align:center;
-font-size:65px;
-margin:40px 0;
-animation:beat 1s infinite;
-}
-
-@keyframes beat{
-0%,100%{
-transform:scale(1);
-}
-50%{
-transform:scale(1.25);
-}
-}
-
-@media(max-width:700px){
-
-.card{
-padding:25px;
-}
-
-h1{
-font-size:48px;
-}
-
-p{
-font-size:16px;
-}
-
-.signature{
-font-size:34px;
-}
-
-}
-</style>
-</head>
-
-<body>
-
-<div class="hearts"></div>
-
-<div class="container">
-<div class="card">
-
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(#ffd6e7,#fff);overflow-x:hidden;color:#5a2a3a}
+#hearts{position:fixed;inset:0;pointer-events:none}
+.heart{position:absolute;color:#ff5c8a;animation:float 8s linear infinite;font-size:20px}
+@keyframes float{from{transform:translateY(100vh)}to{transform:translateY(-10vh)}}
+.center{display:flex;min-height:100vh;align-items:center;justify-content:center;flex-direction:column}
+#envelope{width:260px;height:170px;background:#fff;border:2px solid #d88;position:relative;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+#flap{position:absolute;left:0;top:0;width:0;height:0;border-left:130px solid transparent;border-right:130px solid transparent;border-top:90px solid #f6a;transform-origin:top;transition:1s}
+#letter{display:none;max-width:800px;background:#fff;padding:30px;border-radius:16px;box-shadow:0 8px 25px rgba(0,0,0,.2);margin:30px}
+button{padding:12px 22px;border:none;border-radius:25px;background:#e91e63;color:#fff;font-size:18px;cursor:pointer}
+#timer{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+.box{background:#ffe7ef;padding:10px 14px;border-radius:10px;text-align:center}
+canvas{position:fixed;inset:0;pointer-events:none}
+</style></head><body>
+<div id="hearts"></div><canvas id="c"></canvas>
+<div class="center" id="intro">
 <h1>Happy National Girlfriend's Day ❤️</h1>
-<p class="subtitle">For the love of my life, Valerie 💕</p>
+<p>For Valerie</p>
+<button onclick="openLetter()">Open My Heart ❤️</button>
+<div id="envelope"><div id="flap"></div></div>
 
+</div>
+<div id="letter">
+<h2>My Love,</h2>
 <p>
 Happy National Girlfriend’s Day, my love.
 Even though we are very far apart right now, I just wanted to let you know how much you mean to me.
@@ -225,60 +90,18 @@ I hope we continue growing together, creating memories, chasing our dreams, and 
 ❤️
 </p>
 
-<div class="signature">
-With all my love,<br>
-Diego<br>
-<small style="font-size:28px;">(Your future husband ❤️)</small>
+<div id="timer"></div>
+<h3>With all my love,<br>Diego ❤️<br>(Your future husband)</h3>
+<p style="text-align:center">Forever isn't long enough with you. ❤️</p>
 </div>
-
-<div class="footer-heart">💖</div>
-
-</div>
-</div>
-
 <script>
-const hearts=document.querySelector(".hearts");
-
-function createHeart(){
-const heart=document.createElement("div");
-heart.classList.add("heart");
-heart.innerHTML=["💖","💕","💗","💝","💘","❤️"][Math.floor(Math.random()*6)];
-heart.style.left=Math.random()*100+"vw";
-heart.style.fontSize=(20+Math.random()*25)+"px";
-heart.style.animationDuration=(6+Math.random()*6)+"s";
-hearts.appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
-},12000);
-}
-
-setInterval(createHeart,300);
-</script>
-
-</body>
-</html>
-
-const startDate = new Date("November 8, 2026 00:00:00").getTime();
-
-function updateCounter() {
-    const now = Date.now();
-    const elapsed = now - startDate;
-
-    if (elapsed < 0) {
-        document.getElementById("counter").textContent =
-            "Hasn't started yet!";
-        return;
-    }
-
-    const days = Math.floor(elapsed / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((elapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((elapsed % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((elapsed % (1000 * 60)) / 1000);
-
-    document.getElementById("counter").textContent =
-        `${days} days ${hours}h ${minutes}m ${seconds}s`;
-}
-
-setInterval(updateCounter, 1000);
-updateCounter();
+for(let i=0;i<40;i++){let h=document.createElement('div');h.className='heart';h.innerHTML='❤';h.style.left=Math.random()*100+'%';h.style.animationDelay=Math.random()*8+'s';h.style.fontSize=(12+Math.random()*24)+'px';document.getElementById('hearts').appendChild(h);}
+function openLetter(){document.getElementById('flap').style.transform='rotateX(180deg)';setTimeout(()=>{document.getElementById('intro').style.display='none';document.getElementById('letter').style.display='block';confetti();},900);}
+const start=new Date("2025-11-08T00:00:00");
+function upd(){let now=new Date();let diff=now-start;let s=Math.floor(diff/1000);let sec=s%60,min=Math.floor(s/60)%60,hr=Math.floor(s/3600)%24,days=Math.floor(s/86400);let y=Math.floor(days/365);days%=365;let mo=Math.floor(days/30);days%=30;
+document.getElementById('timer').innerHTML=`<div class=box>${y}<br>Years</div><div class=box>${mo}<br>Months</div><div class=box>${days}<br>Days</div><div class=box>${hr}<br>Hours</div><div class=box>${min}<br>Minutes</div><div class=box>${sec}<br>Seconds</div>`;}
+setInterval(upd,1000);upd();
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');cv.width=innerWidth;cv.height=innerHeight;let p=[];
+function confetti(){for(let i=0;i<200;i++)p.push({x:innerWidth/2,y:120,vx:(Math.random()-0.5)*8,vy:Math.random()*-8,c:`hsl(${Math.random()*360},100%,60%)`});}
+function anim(){ctx.clearRect(0,0,cv.width,cv.height);p.forEach(o=>{o.x+=o.vx;o.y+=o.vy;o.vy+=.15;ctx.fillStyle=o.c;ctx.fillRect(o.x,o.y,5,5)});requestAnimationFrame(anim);}anim();
+</script></body></html>
