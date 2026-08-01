@@ -81,10 +81,53 @@ I hope we continue growing together, creating memories, chasing our dreams, and 
 <script>
 for(let i=0;i<40;i++){let h=document.createElement('div');h.className='heart';h.innerHTML='❤';h.style.left=Math.random()*100+'%';h.style.animationDelay=Math.random()*8+'s';h.style.fontSize=(12+Math.random()*24)+'px';document.getElementById('hearts').appendChild(h);}
 function openLetter(){document.getElementById('flap').style.transform='rotateX(180deg)';setTimeout(()=>{document.getElementById('intro').style.display='none';document.getElementById('letter').style.display='block';confetti();},900);}
-const start=new Date("2025-11-08T00:00:00");
-function upd(){let now=new Date();let diff=now-start;let s=Math.floor(diff/1000);let sec=s%60,min=Math.floor(s/60)%60,hr=Math.floor(s/3600)%24,days=Math.floor(s/86400);let y=Math.floor(days/365);days%=365;let mo=Math.floor(days/30);days%=30;
-document.getElementById('timer').innerHTML=`<div class=box>${y}<br>Years</div><div class=box>${mo}<br>Months</div><div class=box>${days}<br>Days</div><div class=box>${hr}<br>Hours</div><div class=box>${min}<br>Minutes</div><div class=box>${sec}<br>Seconds</div>`;}
-setInterval(upd,1000);upd();
+const startDate = new Date("2025-11-08T00:00:00");
+
+function updateTimer() {
+    const now = new Date();
+
+    let years = now.getFullYear() - startDate.getFullYear();
+    let months = now.getMonth() - startDate.getMonth();
+    let days = now.getDate() - startDate.getDate();
+
+    if (days < 0) {
+        months--;
+        const previousMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += previousMonth.getDate();
+    }
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    const passed = new Date(
+        startDate.getFullYear() + years,
+        startDate.getMonth() + months,
+        startDate.getDate() + days,
+        startDate.getHours(),
+        startDate.getMinutes(),
+        startDate.getSeconds()
+    );
+
+    const remaining = now - passed;
+
+    const hours = Math.floor(remaining / (1000 * 60 * 60)) % 24;
+    const minutes = Math.floor(remaining / (1000 * 60)) % 60;
+    const seconds = Math.floor(remaining / 1000) % 60;
+
+    document.getElementById("timer").innerHTML = `
+        <div class="box">${years}<br>Years</div>
+        <div class="box">${months}<br>Months</div>
+        <div class="box">${days}<br>Days</div>
+        <div class="box">${hours}<br>Hours</div>
+        <div class="box">${minutes}<br>Minutes</div>
+        <div class="box">${seconds}<br>Seconds</div>
+    `;
+}
+
+updateTimer();
+setInterval(updateTimer, 1000);
 const cv=document.getElementById('c'),ctx=cv.getContext('2d');cv.width=innerWidth;cv.height=innerHeight;let p=[];
 function confetti(){for(let i=0;i<200;i++)p.push({x:innerWidth/2,y:120,vx:(Math.random()-0.5)*8,vy:Math.random()*-8,c:`hsl(${Math.random()*360},100%,60%)`});}
 function anim(){ctx.clearRect(0,0,cv.width,cv.height);p.forEach(o=>{o.x+=o.vx;o.y+=o.vy;o.vy+=.15;ctx.fillStyle=o.c;ctx.fillRect(o.x,o.y,5,5)});requestAnimationFrame(anim);}anim();
